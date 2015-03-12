@@ -1,0 +1,2418 @@
+  [1m[36m (120.0ms)[0m  [1mDROP DATABASE IF EXISTS "my_database_test"[0m
+  [1m[35m (383.6ms)[0m  CREATE DATABASE "my_database_test" ENCODING = 'unicode'
+  [1m[36mSQL (1.0ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.6ms)[0m  CREATE TABLE "images" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp, "image_file_name" character varying(255), "image_content_type" character varying(255), "image_file_size" integer, "image_updated_at" timestamp) 
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "title" character varying(255), "text" text, "created_at" timestamp, "updated_at" timestamp, "published_at" date) [0m
+  [1m[35m (2.3ms)[0m  CREATE TABLE "users" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150125041253')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#new as HTML
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2015-01-30 14:05:59 -0600
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (11.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2015-01-30 20:05:59.819006"], ["updated_at", "2015-01-30 20:05:59.819006"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-01-30 20:05:59.848864"], ["updated_at", "2015-01-30 20:05:59.848864"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2015-01-30 20:05:59.850733"], ["updated_at", "2015-01-30 20:05:59.850733"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered users/_form.html.erb (1.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-01-30 20:05:59.940189"], ["updated_at", "2015-01-30 20:05:59.940189"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#new as HTML
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2015-01-30 14:24:54 -0600
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2015-01-30 20:24:54.864605"], ["updated_at", "2015-01-30 20:24:54.864605"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-01-30 20:24:54.879642"], ["updated_at", "2015-01-30 20:24:54.879642"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2015-01-30 20:24:54.880968"], ["updated_at", "2015-01-30 20:24:54.880968"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered users/_form.html.erb (1.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2015-01-30 20:24:54.954533"], ["updated_at", "2015-01-30 20:24:54.954533"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.0ms)[0m  BEGIN
+  [1m[36m (6.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.4ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"example@example.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 436ms
+  [1m[36m (7.9ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"dasf8872@example.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=dasf8872%40example.com&password=password
+Completed 302 Found in 377ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.5ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"camryn_yost@damore.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=camryn_yost%40damore.com&password=password
+Completed 302 Found in 584ms (ActiveRecord: 0.0ms)
+  [1m[36m (6.7ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"bradford_wintheiser@cormier.org", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=bradford_wintheiser%40cormier.org&password=password
+Completed 302 Found in 371ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"jules@pollich.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=jules%40pollich.info&password=password
+Completed 302 Found in 436ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"eugenia.purdy@gorczany.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=eugenia.purdy%40gorczany.name&password=password
+Completed 302 Found in 969ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"elliott_ruecker@stiedemann.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=elliott_ruecker%40stiedemann.info&password=password
+Completed 302 Found in 577ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"camron@gleason.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=camron%40gleason.info&password=password
+Completed 302 Found in 982ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"angelita_beier@kihn.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=angelita_beier%40kihn.info&password=password
+Completed 302 Found in 383ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"lucie@padberg.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=lucie%40padberg.net&password=password
+Completed 302 Found in 445ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"kaylah@lehner.net"}
+Redirected to http://test.host/create_session?email=kaylah%40lehner.net
+Completed 302 Found in 309ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"hollis.rohan@howe.com"}
+Redirected to http://test.host/create_session?email=hollis.rohan%40howe.com
+Completed 302 Found in 626ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 408ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"hailee_hegmann@vandervort.com"}
+Redirected to http://test.host/create_session?email=hailee_hegmann%40vandervort.com
+Completed 302 Found in 254ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 335ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"madie@corkery.info"}
+Redirected to http://test.host/create_session?email=madie%40corkery.info
+Completed 302 Found in 643ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"porter_homenick@kulas.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=porter_homenick%40kulas.biz&password=1rnyye7a
+Completed 302 Found in 371ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"myron_upton@reichelsporer.biz"}
+Redirected to http://test.host/create_session?email=myron_upton%40reichelsporer.biz
+Completed 302 Found in 343ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"bradly@koepp.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=bradly%40koepp.info&password=3rxyco5i
+Completed 302 Found in 591ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"abdiel@mckenzie.info"}
+Redirected to http://test.host/create_session?email=abdiel%40mckenzie.info
+Completed 302 Found in 248ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"joesph@hartmannmcdermott.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=joesph%40hartmannmcdermott.net&password=00nmh4yf
+Completed 302 Found in 376ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"beryl.cummings@hayes.net"}
+Redirected to http://test.host/create_session?email=beryl.cummings%40hayes.net
+Completed 302 Found in 980ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"broderick.baumbach@goodwinkeebler.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=broderick.baumbach%40goodwinkeebler.name&password=rdb8jvlr
+Completed 302 Found in 400ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"reece@eichmann.biz"}
+Redirected to http://test.host/create_session?email=reece%40eichmann.biz
+Completed 302 Found in 333ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"email", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=email&password=sglz4v3q
+Completed 302 Found in 719ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"chloe.schuster@barrowsbergstrom.name"}
+Redirected to http://test.host/create_session?email=chloe.schuster%40barrowsbergstrom.name
+Completed 302 Found in 266ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"wendy@stromanbuckridge.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=wendy%40stromanbuckridge.biz&password=pwa3woke
+Completed 302 Found in 392ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"bernardo.haley@schoen.info"}
+Redirected to http://test.host/create_session?email=bernardo.haley%40schoen.info
+Completed 302 Found in 268ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"pgrennin@gmail.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 339ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"kayla_fahey@rogahn.info"}
+Redirected to http://test.host/create_session?email=kayla_fahey%40rogahn.info
+Completed 302 Found in 274ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"mattie@brown.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=mattie%40brown.info&password=70p220p2
+Completed 302 Found in 381ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"westley@lowe.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=westley%40lowe.net&password=6c6f1lcw
+Completed 302 Found in 946ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"ruthie@quitzon.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=ruthie%40quitzon.net&password=lv1ibmly
+Completed 302 Found in 551ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"abagail@heelhartmann.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=abagail%40heelhartmann.biz&password=7z0p2it6
+Completed 302 Found in 380ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"oswald@gleichner.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=oswald%40gleichner.name&password=g0b7mzpa
+Completed 302 Found in 392ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"retha@krajciktreutel.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=retha%40krajciktreutel.net&password=eykkdoi5
+Completed 302 Found in 360ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"molly_zulauf@hermiston.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=molly_zulauf%40hermiston.com&password=2kbztmax
+Completed 302 Found in 366ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"aylin_hamill@oberbrunnerprosacco.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=aylin_hamill%40oberbrunnerprosacco.name&password=mwbdrh1a
+Completed 302 Found in 398ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"patsy@balistreri.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=patsy%40balistreri.biz&password=n964vjga
+Completed 302 Found in 433ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"madisyn.glover@blockmarks.org", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=madisyn.glover%40blockmarks.org&password=ukdnvhpn
+Completed 302 Found in 403ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"reie_carroll@rosenbaum.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=reie_carroll%40rosenbaum.net&password=1gwyn3pp
+Completed 302 Found in 565ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"arturo@quitzonryan.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=arturo%40quitzonryan.com&password=yyj3rtq7
+Completed 302 Found in 375ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"candace@corkery.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=candace%40corkery.name&password=8ai42gku
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"jennifer@wuckert.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=jennifer%40wuckert.biz&password=7j78ccsd
+Completed 302 Found in 371ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.4ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"maye@hirtherobel.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=maye%40hirtherobel.name&password=894d93rc
+Completed 302 Found in 392ms (ActiveRecord: 0.0ms)
+  [1m[36m (6.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"makenzie@zemlakgulgowski.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=makenzie%40zemlakgulgowski.info&password=hyxfnss3
+Completed 302 Found in 355ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"marjolaine_schinner@botsford.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=marjolaine_schinner%40botsford.biz&password=ltppft74
+Completed 302 Found in 356ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"markus_mueller@keeling.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=markus_mueller%40keeling.com&password=64c9dmg9
+Completed 302 Found in 356ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 456ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 490ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (23.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.4ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 599ms (ActiveRecord: 0.0ms)
+  [1m[36m (6.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 355ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 387ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 382ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 561ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 363ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 385ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 361ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 404ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 387ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 363ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 538ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 375ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 479ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 381ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 370ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 380ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 352ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 404ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 494ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 368ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 365ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 503ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 372ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 357ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 359ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 328ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 392ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 523ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 339ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 375ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 352ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 380ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 363ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 339ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"keshaun@harris.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=keshaun%40harris.biz&password=ww4ej8sk
+Completed 302 Found in 399ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"althea@adamsarmstrong.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=althea%40adamsarmstrong.biz&password=hiud0qwa
+Completed 302 Found in 506ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"imani@brown.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=imani%40brown.info&password=gr3h2uj1
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"everardo@legrosmarvin.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=everardo%40legrosmarvin.info&password=ma142kiv
+Completed 302 Found in 551ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 356ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.3ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"dandre@hilll.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=dandre%40hilll.info&password=cbvduvb7
+Completed 302 Found in 498ms (ActiveRecord: 0.0ms)
+  [1m[36m (5.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"je@kilback.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=je%40kilback.com&password=zqzp1bsk
+Completed 302 Found in 359ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"jeie_orn@hyatt.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=jeie_orn%40hyatt.com&password=kyxwdb12
+Completed 302 Found in 400ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"dorcas_hagenes@baumbach.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=dorcas_hagenes%40baumbach.net&password=8odp15h2
+Completed 302 Found in 402ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=8qrc0a2q
+Completed 302 Found in 341ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"patricia@green.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=patricia%40green.biz&password=9zyk81se
+Completed 302 Found in 423ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"darrion@turner.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=darrion%40turner.name&password=g2y9ii3m
+Completed 302 Found in 594ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"fernando_walsh@renner.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=fernando_walsh%40renner.net&password=8mwpaize
+Completed 302 Found in 440ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"adelia_moen@marquardt.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=adelia_moen%40marquardt.info&password=1lypa1zj
+Completed 302 Found in 355ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=5n1vk4ak
+Completed 302 Found in 330ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 440ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 359ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 396ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 772ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 600ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 140ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 409ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 367ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 352ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 360ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 386ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 355ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 164ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.4ms)[0m  BEGIN
+Started GET "/todos" for 127.0.0.1 at 2015-01-31 12:43:08 -0600
+Processing by TodosController#index as HTML
+Completed 500 Internal Server Error in 394ms
+  [1m[36m (8.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 12:45:34 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 513ms (ActiveRecord: 0.0ms)
+Started GET "/todos" for 127.0.0.1 at 2015-01-31 12:45:34 -0600
+Processing by TodosController#index as HTML
+Completed 500 Internal Server Error in 146ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 12:45:48 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 370ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 12:48:34 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 467ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 13:39:51 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 455ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 13:46:38 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 496ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 13:46:38 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 358ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-01-31 13:46:39 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 231ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 13:47:55 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 368ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 13:47:55 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 353ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-01-31 13:47:55 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 234ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 663ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 379ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 352ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 476ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 847ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 782ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 163ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 13:55:18 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 453ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 13:55:18 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 354ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-01-31 13:55:19 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 238ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 13:55:19 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-01-31 13:55:19 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 224ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.4ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 14:47:55 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 387ms (ActiveRecord: 0.0ms)
+  [1m[36m (5.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 14:47:55 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-01-31 14:47:56 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 235ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 14:47:56 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 352ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-01-31 14:47:56 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 225ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 368ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 356ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 356ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Completed 406 Not Acceptable in 316ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 356ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 160ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"trenton.smith@mertz.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=trenton.smith%40mertz.com&password=9p2pgxwz
+Completed 302 Found in 378ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"leonard.rempel@blanda.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=leonard.rempel%40blanda.com&password=ir6e5pli
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"camron_hickle@donnelly.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=camron_hickle%40donnelly.com&password=2ktsm94z
+Completed 302 Found in 368ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"johnnie.wiegand@eichmannjenkins.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=johnnie.wiegand%40eichmannjenkins.biz&password=0lxx1syg
+Completed 302 Found in 360ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=e8u11nph
+Completed 302 Found in 352ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 14:48:17 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 622ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 14:48:18 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 355ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-01-31 14:48:18 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 243ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 14:48:19 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 367ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-01-31 14:48:19 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 272ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 605ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 675ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 377ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 385ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Completed 406 Not Acceptable in 335ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 372ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 152ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 534ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 461ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 375ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 436ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Completed 406 Not Acceptable in 351ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 376ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 155ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 553ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 358ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 352ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 444ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 905ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 269ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 369ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 375ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 464ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 352ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 368ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 176ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"maudie_okeefe@shields.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=maudie_okeefe%40shields.biz&password=jrsf8ddu
+Completed 302 Found in 378ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"kailee@brown.org", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=kailee%40brown.org&password=9zzi9pu2
+Completed 302 Found in 376ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"marianne_kling@murazik.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=marianne_kling%40murazik.info&password=j6nyylo6
+Completed 302 Found in 544ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"leatha_zulauf@oberbrunner.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=leatha_zulauf%40oberbrunner.net&password=tipohbp7
+Completed 302 Found in 363ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=vaxo2m4c
+Completed 302 Found in 333ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 14:57:12 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 382ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 14:57:12 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 371ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-01-31 14:57:13 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 238ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-01-31 14:57:13 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 355ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-01-31 14:57:13 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 233ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (10.3ms)[0m  ALTER TABLE "images" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (17.7ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (25.8ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-02-01 18:38:38', '2015-02-01 18:38:38', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-02-01 18:38:38', '2015-02-01 18:38:38', 298486374)
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "images" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[35mUser Load (17.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{}}
+Redirected to http://test.host/create_session
+Completed 302 Found in 427ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------
+UsersControllerTest: test_should_destroy_user
+---------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+UsersControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.5ms)
+Completed 200 OK in 9467ms (Views: 9466.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 369ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 491ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 404ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 356ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 368ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 164ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"wyatt@breitenberg.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=wyatt%40breitenberg.info&password=xv6zyhzq
+Completed 302 Found in 360ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"oscar_padberg@west.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=oscar_padberg%40west.com&password=5g51th7f
+Completed 302 Found in 371ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"jordy.orn@leuschke.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=jordy.orn%40leuschke.biz&password=b3fea05q
+Completed 302 Found in 384ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rosina.goldner@hoppefunk.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rosina.goldner%40hoppefunk.name&password=yqc9nzrd
+Completed 302 Found in 357ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=mkao14qj
+Completed 302 Found in 352ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 12:39:13 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 373ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 12:39:13 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 385ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 12:39:14 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 250ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 12:39:14 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 495ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 12:39:15 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 244ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (18.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.5ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 493ms (ActiveRecord: 0.0ms)
+  [1m[36m (6.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 414ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 596ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 376ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 388ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 168ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"demario_macgyver@jacobson.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=demario_macgyver%40jacobson.biz&password=nz52ahd4
+Completed 302 Found in 388ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"ricardo_leannon@altenwerth.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=ricardo_leannon%40altenwerth.net&password=zag0in15
+Completed 302 Found in 474ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"jarret.balistreri@schusterstanton.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=jarret.balistreri%40schusterstanton.info&password=s4vzxlyd
+Completed 302 Found in 1021ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"cordelia.abernathy@kulas.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=cordelia.abernathy%40kulas.name&password=hpbsnp3e
+Completed 302 Found in 423ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=nrlhsntl
+Completed 302 Found in 328ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 13:08:38 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 405ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 13:08:38 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 458ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 13:08:39 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 303ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 13:08:39 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 375ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 13:08:40 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 257ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.4ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 395ms (ActiveRecord: 0.0ms)
+  [1m[36m (5.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 356ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 370ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 470ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 360ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 145ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"libbie_prosacco@kshlerin.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=libbie_prosacco%40kshlerin.biz&password=get4xmx0
+Completed 302 Found in 400ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"blake.lubowitz@schmitt.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=blake.lubowitz%40schmitt.biz&password=ou9zhqrc
+Completed 302 Found in 508ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"buster@raufisher.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=buster%40raufisher.com&password=syjmsvxl
+Completed 302 Found in 608ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rebeca@kovacek.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rebeca%40kovacek.net&password=dsy8fbn1
+Completed 302 Found in 372ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=c8264s37
+Completed 302 Found in 316ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 13:20:59 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 357ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 13:21:00 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 367ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 13:21:00 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 229ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 13:21:00 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 378ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 13:21:01 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 230ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 359ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 367ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 376ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 165ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"ernestine@ko.org", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=ernestine%40ko.org&password=4f2asn41
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"trycia@halvorson.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=trycia%40halvorson.com&password=0c5wrard
+Completed 302 Found in 355ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"elinor_robel@leuschkezemlak.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=elinor_robel%40leuschkezemlak.com&password=uhebfnch
+Completed 302 Found in 356ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"kraig_mills@stromanlueilwitz.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=kraig_mills%40stromanlueilwitz.info&password=bcbjs4s3
+Completed 302 Found in 376ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=vb6qrr2d
+Completed 302 Found in 351ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 13:21:23 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 614ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 13:21:24 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 635ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 13:21:24 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 279ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 13:21:25 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 376ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 13:21:25 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 229ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.2ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 498ms (ActiveRecord: 0.0ms)
+  [1m[36m (5.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 473ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 389ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 363ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 380ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 194ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"robert@nitzsche.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=robert%40nitzsche.info&password=l4rhmr94
+Completed 302 Found in 398ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"isabella@okeefeoreilly.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=isabella%40okeefeoreilly.name&password=1r25oc8g
+Completed 302 Found in 377ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"chase@rolfsonpfannerstill.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=chase%40rolfsonpfannerstill.name&password=659j1eqn
+Completed 302 Found in 539ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"jakayla_schaefer@streichprohaska.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=jakayla_schaefer%40streichprohaska.net&password=x9k28q5c
+Completed 302 Found in 383ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=3rajg9gt
+Completed 302 Found in 328ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 14:23:41 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 490ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 14:23:42 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 382ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 14:23:42 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 303ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 14:23:42 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 398ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 14:23:43 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 232ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.6ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 388ms (ActiveRecord: 0.0ms)
+  [1m[36m (6.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 377ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 367ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 424ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 372ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 171ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rosalia@white.org", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rosalia%40white.org&password=s4aixk52
+Completed 302 Found in 383ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"isaac@marks.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=isaac%40marks.biz&password=ly44ccxi
+Completed 302 Found in 471ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"mandy@considine.org", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=mandy%40considine.org&password=4ify6iuz
+Completed 302 Found in 395ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"raven_beer@huelskerluke.org", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=raven_beer%40huelskerluke.org&password=dqz4vazm
+Completed 302 Found in 380ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=h76tsodg
+Completed 302 Found in 323ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:13:14 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 396ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:13:14 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 371ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:13:15 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Completed 500 Internal Server Error in 466ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:13:15 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 513ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:13:16 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Completed 500 Internal Server Error in 341ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 360ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 369ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 348ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 416ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 358ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 172ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"giovanni_deckow@mayertharvey.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=giovanni_deckow%40mayertharvey.biz&password=15knejsh
+Completed 302 Found in 379ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"effie@leannonflatley.info", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=effie%40leannonflatley.info&password=j3ig32ew
+Completed 302 Found in 355ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"verlie@dubuque.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=verlie%40dubuque.net&password=fqn4hec1
+Completed 302 Found in 378ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"kaia@hilllgreenfelder.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=kaia%40hilllgreenfelder.com&password=gaz77ku7
+Completed 302 Found in 364ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=70o0aas3
+Completed 302 Found in 308ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:22:16 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 362ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:22:16 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 379ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:22:16 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Completed 500 Internal Server Error in 386ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:22:17 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 444ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:22:17 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Completed 500 Internal Server Error in 409ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:23:08 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 1234ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:23:09 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 396ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:23:09 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Completed 500 Internal Server Error in 552ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:23:10 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 519ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:23:11 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Completed 500 Internal Server Error in 397ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:30:07 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 571ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:30:08 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 495ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:30:08 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Completed 500 Internal Server Error in 437ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:30:09 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 518ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:30:09 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Completed 500 Internal Server Error in 447ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:30:21 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 569ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:30:22 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 598ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:30:23 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Completed 500 Internal Server Error in 420ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:30:23 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 368ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:30:23 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Completed 500 Internal Server Error in 389ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:34:16 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 3490ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:34:20 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 1331ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:34:21 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Completed 500 Internal Server Error in 1507ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:34:23 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 722ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:34:23 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Completed 500 Internal Server Error in 1494ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:34:37 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 367ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:34:38 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 389ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:34:38 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Redirected to 
+Completed 500 Internal Server Error in 408ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:34:39 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 363ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:34:39 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Redirected to 
+Completed 500 Internal Server Error in 398ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.2ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:36:55 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 514ms (ActiveRecord: 0.0ms)
+  [1m[36m (6.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:36:56 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 1298ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:36:57 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Completed 200 OK in 407ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:36:58 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 363ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:36:58 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Completed 200 OK in 372ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:41:23 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 442ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:41:23 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 458ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:41:24 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Completed 200 OK in 399ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:41:24 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 367ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:41:24 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Completed 200 OK in 358ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 573ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 598ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 396ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 380ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/todos
+Completed 302 Found in 386ms (ActiveRecord: 0.0ms)
+Processing by SessionsController#destroy as HTML
+Redirected to http://test.host/
+Completed 302 Found in 154ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"simone@corwin.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=simone%40corwin.com&password=0eyfas6p
+Completed 302 Found in 1009ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"aryanna_beatty@gutkowski.name", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=aryanna_beatty%40gutkowski.name&password=ai5xbutj
+Completed 302 Found in 363ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"kimberly@schamberger.net", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=kimberly%40schamberger.net&password=1fmuvcnm
+Completed 302 Found in 560ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"ophelia@streich.biz", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=ophelia%40streich.biz&password=iqd1ajwr
+Completed 302 Found in 404ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://test.host/create_session?email=rspectester%40tester.com&password=wyyabrs2
+Completed 302 Found in 331ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:42:41 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 413ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:42:41 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 367ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:42:42 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"description"=>"a new todo description"}
+Completed 200 OK in 465ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started POST "/sessions" for 127.0.0.1 at 2015-02-01 15:42:42 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"rspectester@tester.com", "password"=>"[FILTERED]"}
+Redirected to http://www.example.com/todos
+Completed 302 Found in 424ms (ActiveRecord: 0.0ms)
+Started POST "/todos" for 127.0.0.1 at 2015-02-01 15:42:43 -0600
+Processing by TodosController#create as HTML
+  Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
+Completed 200 OK in 405ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m

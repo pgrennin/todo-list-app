@@ -1,0 +1,60 @@
+<!-- Jquery UI script for sorting table -->
+
+<table class="table table-hover">
+  <tbody>
+  <tr>
+    <th>ID</th>
+    <th>Description</th>
+    <!-- <th>Completed?</th> -->
+    <th>Mark complete</th>
+    <th>Edit</th>
+  </tr>
+
+  <% @response_hash.each do |todo| %>
+    <!-- button_status is complete if todo[is_complete] is true
+    else, it is incomplete -->
+    <% if todo["is_complete"] %>
+      <% button_status = "Complete" %>
+      <% button_class = "btn btn-primary" %>
+    <% else %>
+      <% button_status = "Incomplete" %>
+      <% button_class = "btn btn-default" %>
+    <% end %>
+    <!-- Displays table of tasks -->
+    <tr class="todo-row" id="todo-row-<%=todo["id"]%>">
+      <td><%=todo["id"]%></td>
+      <td><span id="todo-description-field-<%=todo["id"]%>"><%=todo["description"]%></span></td>
+      <!-- <td>todo["is_complete"]</td> -->
+      <td>
+        <!-- When the complete/incomplete button is clicked send the updated status as a parameter -->
+        <% if todo["is_complete"].to_s == "true" %>
+          <% @updated_status = "false" %>
+        <%else%>
+          <% @updated_status = "true" %>
+        <% end %>
+
+        <%= button_to button_status,
+        update_todo_path( todo_id: todo["id"],
+                          description: todo["description"],
+                          is_complete: @updated_status
+                          ),
+        remote: true,
+        class: "#{button_class} todo-button",
+        id: "todo-button-#{todo["id"]}"%>
+      </td>
+      <td>
+        <!-- edit todo descrotion -->
+        <%= button_to "Edit",
+        edit_todo_description_path( todo_id: todo["id"],
+                                    description: todo["description"],
+                                    is_complete: todo["is_complete"]
+                                  ),
+        remote: true,
+        class: "btn btn-link todo-description-button",
+        id: "todo-edit-button-#{todo["id"]}"%>
+      </td>
+    </tr>
+  <% end %>
+  <tbody>
+</table>
+

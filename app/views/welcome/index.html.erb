@@ -1,0 +1,60 @@
+
+<script>
+  $('#logout-button').hide();
+  $('#signed-in-text').hide();
+</script>
+
+<div class="col-md-2"></div>
+
+<div class="col-md-8">
+
+  <div id="space-under-navbar">
+  </div>
+
+  <!-- login error message -->
+  <p>
+  <div id="login-error" style="display:none;" ><font color="red">Invalid Username or Password.</font></div>
+  </p>
+
+
+  <!-- Login Form -->
+  <p>
+  <div id="login-form" style="display:none;" ><%= render 'sessions/form' %></div>
+  </p>
+
+  <!-- Create User Form -->
+  <p>
+  <div id="user-form" style="display:none;"></div>
+  </p>
+
+  <!-- Create Todo Form -->
+  <p>
+    <%=link_to 'Create a Todo Item', new_todo_path, remote: true%>
+  </p>
+  <div id="todo-form"></div>
+  <hr>
+
+  <!-- Todo Index -->
+  <p>
+    <%= link_to 'View Your Todos', todos_path, remote: true %>
+  </p>
+  <div id="todo-index"></div>
+  <hr>
+</div>
+
+
+<div class="col-md-2"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
