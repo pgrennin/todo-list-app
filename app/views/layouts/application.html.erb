@@ -2,7 +2,7 @@
 <html>
 <head>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <title>NextcapitalTodoListChallengePatrick</title>
+  <title>TodoListChallengePatrick</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -23,10 +23,10 @@
             <%= image_tag("todo-icon.png", :alt => "icon", class: "navbar-icon") %>
           </a>
           <p class="navbar-text" id="app-title">
-            NextCapital Todo List
+            Patrick's Todo App
           </p>
 
-          <div class="collapse navbar-collapse navbar-right" id="navbar-buttons">
+<!--           <div class="collapse navbar-collapse navbar-right" id="navbar-buttons"
             <ul class="nav navbar-nav ">
               <li><%= link_to 'Login', new_session_path, remote: true, id: "login-button"%></li>
               <li><%= link_to 'Signup', new_user_path, remote: true, id: "signup-button"%></li>
@@ -36,9 +36,10 @@
               </li>
             </ul>
           </div><!-- /.navbar-collapse -->
-        </div>
+<!--          </div>
       </div>
-    </nav>
+ -->
+</nav>
 
 <%= yield %>
 
