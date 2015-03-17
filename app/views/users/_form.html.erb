@@ -1,5 +1,9 @@
-<%= form_tag('/users', method: "post", remote: true) do %>
-  <%= label_tag :email %>
+<%if flash[:error] %>
+    <p><%=flash[:error]%></p>
+<%end%>
+
+<%= form_tag('/users', method: "post", remote: false) do %>
+  <%= label_tag :username %>
   <%= text_field_tag :email%>
   <%= label_tag :password %>
   <%= password_field_tag :password %>

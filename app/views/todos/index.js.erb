@@ -1,31 +1,33 @@
 // After session is created do this
-$('#user-form').slideUp();
-$('#login-form').slideUp();
-$('#login-button').slideUp();
-$('#signup-button').slideUp();
-$("#logout-button").show();
-$("#signed-in-text").show();
-$("#login-error").hide();
+// $('#user-form').slideUp();
+// $('#login-form').slideUp();
+// $('#login-button').slideUp();
+// $('#signup-button').slideUp();
+// $("#logout-button").show();
+// $("#signed-in-text").show();
+// $("#login-error").hide();
 
-$('#todo-index').html("<%= j (render 'index') %>");
+// $('#todo-index').html("<%= j (render 'index') %>");
 
-// Allows drag and drop reordering
-$('tbody').sortable();
+// // Allows drag and drop reordering
+// $('tbody').sortable();
 
-// changes styling of complete/incomplete button
-$('.todo-button').click(function(){
-        if($(this).hasClass("btn-primary")){
-            $(this).removeClass("btn-primary");
-            $(this).addClass("btn-default");
-            $(this).val("Incomplete");
-        }else  if($(this).hasClass("btn-default")){
-            $(this).removeClass("btn-default");
-            $(this).addClass("btn-primary");
-            $(this).val("Complete");
-        }
-    });
+// // changes styling of complete/incomplete button
+// $('.todo-button').click(function(){
+//         if($(this).hasClass("btn-primary")){
+//             $(this).removeClass("btn-primary");
+//             $(this).addClass("btn-default");
+//             $(this).val("Incomplete");
+//         }else  if($(this).hasClass("btn-default")){
+//             $(this).removeClass("btn-default");
+//             $(this).addClass("btn-primary");
+//             $(this).val("Complete");
+//         }
+//     });
 
-// hides create todo form after submitting
-$("#create-todo-form").submit(function(){
-        $(this).slideUp();
-    })
+// // hides create todo form after submitting
+// $("#create-todo-form").submit(function(){
+//         $(this).slideUp();
+//     })
+
+// alert("Hello! I am an alert box!!");

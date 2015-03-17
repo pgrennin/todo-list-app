@@ -1,0 +1,24 @@
+<script>
+
+</script>
+
+<div class="col-md-2"></div>
+
+<div class="col-md-8">
+
+
+  <!-- Create Todo Form -->
+  <p>
+    <%=link_to 'Create a Todo Item', new_todo_path, remote: true%>
+  </p>
+  <div id="todo-form"></div>
+  <hr>
+
+  <!-- Todo Index -->
+  <div id="todo-index">
+    <%= render 'index' %>
+  </div>
+  <hr>
+</div>
+
+<div class="col-md-2"></div>

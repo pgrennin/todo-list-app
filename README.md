@@ -2,22 +2,23 @@
 
 
 ### Overview
-In this assignment I created a to-do list web application.  This application is completely asynchronous and runs on a single-page using AJAX and JQuery.
 
+In this challenge I created a to-do list web application in Rails.  My main goal was to practice building a Ruby on Rails app that were asynchronous and get more experience utilizing AJAX and JQuery.  Once logged in
 
 ### Application Link
 
 
-### Requirements
+### Features
   - [x] Sign up user
   - [x] Log in user
   - [x] See a list of all the todos for user
   - [x] Create new todos for user
   - [x] Edit a todo description
+  - [x] Delete a todo
   - [x] Mark todos as complete or incomplete for user
-  - [x] Reorder their todos (this is just client-side) for user.
+  - [x] Reorder their todos via drag and drop.
 
-### Testing
+<!-- ### Testing -->
 <!-- Tests were created in Rspec for all the requirements listed above.
 
 To run all the rspec tests from the terminal enter the following:

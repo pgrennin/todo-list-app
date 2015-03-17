@@ -20,8 +20,12 @@ class UsersController < ApplicationController
 
     @user = User.new(email: @email, password: @password)
     @user.save
-
-    redirect_to create_session_path({email: @email, password: @password})
+    if @user.save
+      redirect_to create_session_path({email: @email, password: @password})
+    else
+      flash[:error] = "Error creating account"
+      redirect_to new_user_path
+    end
   end
 
 end

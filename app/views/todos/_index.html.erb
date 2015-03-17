@@ -1,16 +1,17 @@
-<!-- Jquery UI script for sorting table -->
 
 <table class="table table-hover">
   <tbody>
   <tr>
-    <th>ID</th>
-    <th>Description</th>
+    <!-- <th>ID</th> -->
+    <th><span class="table-header">Description</span></th>
     <!-- <th>Completed?</th> -->
-    <th>Mark complete</th>
-    <th>Edit</th>
+    <th><span class="table-header">Mark complete</span></th>
+    <th><span class="table-header">Edit</span></th>
+    <th><span class="table-header">Delete</span></th>
+
   </tr>
 
-  <% @response_hash.each do |todo| %>
+  <% @todos.each do |todo| %>
     <!-- button_status is complete if todo[is_complete] is true
     else, it is incomplete -->
     <% if todo["is_complete"] %>
@@ -22,7 +23,7 @@
     <% end %>
     <!-- Displays table of tasks -->
     <tr class="todo-row" id="todo-row-<%=todo["id"]%>">
-      <td><%=todo["id"]%></td>
+      <!-- <td><%=todo["id"]%></td> -->
       <td><span id="todo-description-field-<%=todo["id"]%>"><%=todo["description"]%></span></td>
       <!-- <td>todo["is_complete"]</td> -->
       <td>
@@ -43,7 +44,7 @@
         id: "todo-button-#{todo["id"]}"%>
       </td>
       <td>
-        <!-- edit todo descrotion -->
+        <!-- edit todo description -->
         <%= button_to "Edit",
         edit_todo_description_path( todo_id: todo["id"],
                                     description: todo["description"],
@@ -53,8 +54,34 @@
         class: "btn btn-link todo-description-button",
         id: "todo-edit-button-#{todo["id"]}"%>
       </td>
+      <td>
+        <!-- Delete todo -->
+        <%= button_to "Delete", { action: "destroy", id: todo["id"] },
+                                method: :delete, data: { confirm: "Are you sure?" },
+                                remote: true,
+                                class: "btn btn-link todo-description-button",
+                                id: "todo-delete-button-#{todo["id"]}"%>
+      </td>
+
     </tr>
   <% end %>
   <tbody>
 </table>
 
+<%= javascript_tag do %>
+  // Allows drag and drop reordering
+  $('tbody').sortable();
+
+  // changes styling of complete/incomplete button
+  $('.todo-button').click(function(){
+          if($(this).hasClass("btn-primary")){
+              $(this).removeClass("btn-primary");
+              $(this).addClass("btn-default");
+              $(this).val("Incomplete");
+          }else  if($(this).hasClass("btn-default")){
+              $(this).removeClass("btn-default");
+              $(this).addClass("btn-primary");
+              $(this).val("Complete");
+          }
+      });
+<% end %>

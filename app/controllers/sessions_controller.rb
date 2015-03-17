@@ -7,21 +7,20 @@ class SessionsController < ApplicationController
   end
 
   def create
+    # raise params.inspect
     @email = params[:email]
     @password = params[:password]
     @user = User.find_by(email: @email)
-    session[:user_id] = @user.id
-    redirect_to todos_path
+    if @user.password == @password #success
+      session[:user_id] = @user.id
+      redirect_to todos_path
+    else # incorrect username/password raise error message
+      flash[:error] = "Username or Password invalid"
+      redirect_to new_session_path
+    end
   end
 
   def destroy
-    api_token = session[:api_token].to_s
-    user_id = session[:user_id].to_i
-    response = RestClient.delete("http://recruiting-api.nextcapital.com/users/sign_out", :params => {:api_token => api_token, :user_id => user_id}){|response, request, result| response }
-    @response_code = response.code
-
-    puts "***********response code - sessions#destroy ***********"
-    puts @response_code
     reset_session
     redirect_to root_path
   end

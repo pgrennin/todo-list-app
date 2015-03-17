@@ -6,23 +6,9 @@ class TodosController < ApplicationController
 
   def create
     @user_id = session[:user_id]
-    # @api_token = session[:api_token]
-    @todo = params[:description]
-    # api request for creating a new todo
-    # response = RestClient.post("http://recruiting-api.nextcapital.com/users/#{@user_id}/todos",
-    #           { "api_token" => @api_token, "todo" => {"description" => "#{@todo}"}}.to_json,
-    #           :content_type => :json,
-    #           :accept => :json){|response, request, result| response }
-
-    # @response_code = response.code
-    # puts "*********** response code todos#create ***********"
-    # puts @response_code
-
-    # api request for all retrieving all users' todos
-    # response = RestClient.get "http://recruiting-api.nextcapital.com/users/#{@user_id}/todos.json?api_token=#{@api_token}",
-    #           :content_type => :json,
-    #           :accept => :json
-    # @response_hash = JSON.parse(response)
+    @user = User.find(@user_id)
+    @user.todos.create(description: params[:description], is_complete: false)
+    @todos = @user.todos
 
     respond_to do |format|
           format.html {render nothing: true}
@@ -32,34 +18,56 @@ class TodosController < ApplicationController
 
   def index
     @user_id = session[:user_id]
-    @email = session[:email]
-    @api_token = session[:api_token]
-    response = RestClient.get "http://recruiting-api.nextcapital.com/users/#{@user_id}/todos.json?api_token=#{@api_token}",
-              :content_type => :json,
-              :accept => :json
-    @response_hash = JSON.parse(response)
+    @user = User.find(@user_id)
+    @todos = @user.todos
+    # render 'welcome/index.html.erb'
+
+    # render 'index'
+    # respond_to do |format|
+    #       format.html {render 'index.html.erb'}
+    #       format.js {render 'index.js.erb'}
+    # end
+    # redirect_to
+
   end
 
   def update
-    @user_id = session[:user_id].to_s
-    @api_token = session[:api_token]
+    @user_id = session[:user_id]
     @todo_id = params[:todo_id]
     @description = params[:description]
     @is_complete = params[:is_complete]
 
-    response = RestClient.put("http://recruiting-api.nextcapital.com/users/#{@user_id}/todos/#{@todo_id}",
-              {"api_token"=>@api_token, "todo"=> {"description"=> @description, "is_complete"=> @is_complete}}.to_json,
-              :content_type => :json,
-              :accept => :json){|response, request, result| response }
+    @todo = Todo.find(@todo_id)
+    @todo.update(description: @description, is_complete: @is_complete)
 
-   @response_hash = JSON.parse(response)
 
-   @response_code = response.code
+   #  response = RestClient.put("http://recruiting-api.nextcapital.com/users/#{@user_id}/todos/#{@todo_id}",
+   #            {"api_token"=>@api_token, "todo"=> {"description"=> @description, "is_complete"=> @is_complete}}.to_json,
+   #            :content_type => :json,
+   #            :accept => :json){|response, request, result| response }
 
-   puts "***********response code - todo#update***********"
-   puts @response_code
+   # @response_hash = JSON.parse(response)
+
+   # @response_code = response.code
+
+   # puts "***********response code - todo#update***********"
+   # puts @response_code
 
   end
+
+  def destroy
+    @user_id = session[:user_id]
+    @user = User.find(@user_id)
+    @todos = @user.todos
+    # raise params.inspect
+    Todo.find(params[:id]).destroy
+    # redirect_to todos_path
+    # respond_to do |format|
+    #       format.html {render nothing: true}
+    #       format.js {render 'destroy.js.erb'}
+    # end
+  end
+
 
   def edit_description
     @todo_id = params[:todo_id]
