@@ -7,7 +7,7 @@
 
 <div class="jumbotron">
        <!-- <h1>Jumbotron heading</h1> -->
-       <p class="lead">Thanks for checking out my to-do list application.  To get started click 'signup'.  If you already created an account you can log in again to view your existing to-do list.</p>
+       <p class="lead">Thanks for checking out my to-do list application.  To get started click 'create an account'.</p>
 <!--        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
  -->       <p><%= link_to 'Login', new_session_path, remote: false, id: "login-button", class: "btn btn btn-success"%></p>
        <p><%= link_to 'Create an account', new_user_path, id: "signup-button", class: "btn btn btn-success"%></p>
@@ -16,7 +16,7 @@
      <div class="row marketing">
        <div class="col-lg-6">
          <h4>Overview</h4>
-         <p>In this challenge I created a to-do list web application in Rails.  My main goal was to practice building a Ruby on Rails app that was asynchronous using AJAX and JQuery.  Once logged in users can create, edit, delete, and reorder to-do items without reloading the page.</p>
+         <p>In this challenge I created a to-do list web application in Rails.  My main goal was to practice building a Ruby on Rails app that was asynchronous.  Once logged in users can create, edit, delete, and reorder their to-do items without reloading the page.  To reorder to-do items click and drag the item.</p>
 
          <h4>Features</h4>
          <p>
@@ -36,10 +36,10 @@
          <p>
            <ul>
            <li>Ruby on Rails** as the web application framework</li>
-           <li>Bootstrap** for front-end user interface components</li>
            <li>AJAX/ Jquery** for an asynchronous user experience</li>
            <li>Jquery UI** to achive drag and drop reordering of todo items.</li>
            <li>Rspec and Faker** for integration and controller testing.</li>
+           <li>Bootstrap** for front-end user interface components</li>
           </ul>
          </p>
        </div>

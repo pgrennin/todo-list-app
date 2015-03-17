@@ -30,7 +30,7 @@ To run all the rspec tests from the terminal enter the following:
 
 ###Technologies Used in this App
   - **Ruby on Rails** as the web application framework
-  - **Bootstrap** for front-end user interface components
   - **AJAX/ Jquery** for an asynchronous user experience
   - **Jquery UI** to achive drag and drop reordering of todo items.
   - **Rspec and Faker** for integration and controller testing.
+  - **Bootstrap** for front-end user interface components
