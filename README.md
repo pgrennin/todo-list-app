@@ -2,10 +2,10 @@
 
 
 ### Overview
-
-In this challenge I created a to-do list web application in Rails.  My main goal was to practice building a Ruby on Rails app that were asynchronous and get more experience utilizing AJAX and JQuery.  Once logged in
+In this challenge I created a to-do list web application in Rails.  My main goal was to practice building a Ruby on Rails app that was asynchronous using AJAX and JQuery.  Once logged in users can create, edit, delete, and reorder to-do items without reloading the page.
 
 ### Application Link
+
 
 
 ### Features
@@ -23,11 +23,9 @@ In this challenge I created a to-do list web application in Rails.  My main goal
 
 To run all the rspec tests from the terminal enter the following:
 
-```$ bin/rspec ```
+```$ bin/rspec ``` -->
 
-OR for more detailed output of test results use:
 
-```$ bin/rspec --format d ``` -->
 
 
 ###Technologies Used in this App

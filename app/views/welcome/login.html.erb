@@ -1,51 +1,58 @@
+<!-- <p><%= link_to 'Login', new_session_path, remote: false, id: "login-button"%></p>
+<hr>
 
-<div class="col-md-2"></div>
-
-<div class="col-md-8">
-
-<!--   <div id="space-under-navbar">
-  </div>
+<p><%= link_to 'Signup', new_user_path, id: "signup-button"%></p>
+<hr>
  -->
-  <!-- login error message -->
-  <p>
-  <div id="login-error" style="display:none;" ><font color="red">Invalid Username or Password.</font></div>
-  </p>
 
+<div class="jumbotron">
+       <!-- <h1>Jumbotron heading</h1> -->
+       <p class="lead">Thanks for checking out my to-do list application.  To get started click 'signup'.  If you already created an account you can log in again to view your existing to-do list.</p>
+<!--        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+ -->       <p><%= link_to 'Login', new_session_path, remote: false, id: "login-button", class: "btn btn btn-success"%></p>
+       <p><%= link_to 'Create an account', new_user_path, id: "signup-button", class: "btn btn btn-success"%></p>
+     </div>
 
-  <p><%= link_to 'Login', new_session_path, remote: false, id: "login-button"%></p>
-  <hr>
+     <div class="row marketing">
+       <div class="col-lg-6">
+         <h4>Overview</h4>
+         <p>In this challenge I created a to-do list web application in Rails.  My main goal was to practice building a Ruby on Rails app that was asynchronous using AJAX and JQuery.  Once logged in users can create, edit, delete, and reorder to-do items without reloading the page.</p>
 
-  <p><%= link_to 'Signup', new_user_path, id: "signup-button"%></p>
-  <hr>
+         <h4>Features</h4>
+         <p>
+           <ul>
+           <li>Sign up user</li>
+           <li>Log in user</li>
+           <li>See a list of all the todos for user</li>
+           <li>Create new todos for user</li>
+           <li>Edit a todo description</li>
+           <li>Delete a todo</li>
+           <li>Mark todos as complete or incomplete for user</li>
+           <li>Reorder todos via drag and drop.</li>
+          </ul>
+         </p>
 
-  <!-- Login Form -->
-  <p>
-  <div id="login-form" style="display:none;" ></div>
-  </p>
+         <h4>Technologies Used in this App</h4>
+         <p>
+           <ul>
+           <li>Ruby on Rails** as the web application framework</li>
+           <li>Bootstrap** for front-end user interface components</li>
+           <li>AJAX/ Jquery** for an asynchronous user experience</li>
+           <li>Jquery UI** to achive drag and drop reordering of todo items.</li>
+           <li>Rspec and Faker** for integration and controller testing.</li>
+          </ul>
+         </p>
+       </div>
 
-  <!-- Create User Form -->
-  <p>
-  <div id="user-form" style="display:none;"></div>
-  </p>
+       <!-- <div class="col-lg-6">
+         <h4>Subheading</h4>
+         <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-  <div class="jumbotron">
-    <h1>Welcome!</h1>
-    <h4>Getting Started</h4>
-    <p>Thanks for checking out my to-do list application.  To get started click 'signup'.  No worries.  It's super easy to create an account.  If you already created an account you can log in to view your existing to-do list.</p>
-    <h4>About</h4>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-  </div>
+         <h4>Subheading</h4>
+         <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 
-</div>
-
-
-<div class="col-md-2"></div>
-
-
-
-
-
-
-
-
+         <h4>Subheading</h4>
+         <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+       </div> -->
+     </div>
 
