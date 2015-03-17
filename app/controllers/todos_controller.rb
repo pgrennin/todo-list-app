@@ -9,7 +9,7 @@ class TodosController < ApplicationController
     @user = User.find(@user_id)
     @user.todos.create(description: params[:description], is_complete: false)
     @todos = @user.todos
-
+    # redirect_to todos_path
     respond_to do |format|
           format.html {render nothing: true}
           format.js {render 'create.js.erb'}
