@@ -4,10 +4,6 @@
 ### Overview
 In this challenge I created a to-do list web application in Rails.  My main goal was to practice building a Ruby on Rails app that was asynchronous using AJAX and JQuery.  Once logged in users can create, edit, delete, and reorder to-do items without reloading the page.
 
-### Application Link
-
-
-
 ### Features
   - [x] Sign up user
   - [x] Log in user
