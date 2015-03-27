@@ -54,4 +54,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
+gem 'devise', '~> 3.4.1'
+
 ruby "2.0.0"

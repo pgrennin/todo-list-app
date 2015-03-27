@@ -20,8 +20,8 @@
             <ul class="nav nav-pills pull-right">
               <li role="presentation"><a href="/">Home</a></li>
               <!-- <li role="presentation"><a href="#">About</a></li> -->
-              <li role="presentation"><a href="http://www.patrickgrenning.com/">PatrickGrenning.com</a></li>
-              <% if signed_in? %>
+<!--               <li role="presentation"><a href="http://www.patrickgrenning.com/">PatrickGrenning.com</a></li>
+ -->              <% if signed_in? %>
                 <li role="presentation"><%= link_to 'Logout', sign_out_path, id:"logout-button"%></li>
               <% end %>
             </ul>
@@ -29,34 +29,13 @@
           <h3 class="text-muted">Patrick's To-do List App</h3>
           </div>
 
-  <!-- <div class="container-fluid">
 
-    <nav class="navbar navbar-default ">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">
-            <%= image_tag("todo-icon.png", :alt => "icon", class: "navbar-icon") %>
-          </a>
-          <p class="navbar-text" id="app-title">
-            Patrick's To-do List App
-          </p>
-
-        <div class="collapse navbar-collapse navbar-right" id="navbar-buttons">
-          <ul class="nav navbar-nav ">
-            <% if signed_in? %>
-            <li>
-              <%= link_to 'Logout', sign_out_path, id:"logout-button"%>
-            </li>
-            <% end %>
-          </ul>
-        </div><! /.navbar-collapse -->
-<!-- </nav> -->
-
+    <!-- from devise -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
 <%= yield %>
 
-  <footer class="footer">
-          <p>&copy; Patrick Grenning 2015</p>
-        </footer>
 
   </div> <!-- /container -->
 
