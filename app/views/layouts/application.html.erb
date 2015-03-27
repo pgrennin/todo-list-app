@@ -6,8 +6,6 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
-
   <script>
   </script>
 
@@ -19,11 +17,12 @@
           <nav>
             <ul class="nav nav-pills pull-right">
               <li role="presentation"><a href="/">Home</a></li>
-              <!-- <li role="presentation"><a href="#">About</a></li> -->
-<!--               <li role="presentation"><a href="http://www.patrickgrenning.com/">PatrickGrenning.com</a></li>
- -->              <% if signed_in? %>
-                <li role="presentation"><%= link_to 'Logout', sign_out_path, id:"logout-button"%></li>
-              <% end %>
+                  <% if user_signed_in? %>
+                    <li role="presentation"><%= link_to 'Logout', destroy_user_session_path, :method => :delete, id:"logout-button"%></li>
+                  <% else %>
+                    <li role="presentation"><%= link_to 'Register', new_user_registration_path %></li>
+                    <li role="presentation"><%= link_to 'Sign in', new_user_session_path %><li>
+                  <% end %>     
             </ul>
           </nav>
           <h3 class="text-muted">Patrick's To-do List App</h3>
@@ -31,9 +30,11 @@
 
 
     <!-- from devise -->
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    
+    <% if alert or notice %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+
 <%= yield %>
 
 

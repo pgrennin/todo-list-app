@@ -1,18 +1,11 @@
-<script>
-
-</script>
-
-<div class="col-md-2"></div>
-
-<div class="col-md-8">
-
 
   <!-- Create Todo Form -->
   <p>
-    <%=link_to 'Create a Todo Item', new_todo_path, remote: true%>
+    <%=link_to 'Create a Todo Item', new_todo_path, remote: true, class: "btn btn-success"%>
   </p>
+  
+  <br>
   <div id="todo-form"></div>
-  <hr>
 
   <!-- Todo Index -->
   <div id="todo-index">
@@ -20,6 +13,4 @@
   </div>
   <hr>
 </div>
-
-<div class="col-md-2"></div>
 

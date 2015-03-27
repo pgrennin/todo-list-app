@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :users
+  devise_for :users
   resources :todos
-  resources :sessions
+  # resources :users
+  # resources :sessions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -22,8 +23,17 @@ Rails.application.routes.draw do
 
   post 'edit_todo_description' => 'todos#edit_description'
 
+  post 'update_todo_status' => 'todos#update_status'
+  
   post 'update_todo_description' => 'todos#update_description'
 
+  get 'user_root' => 'todos#index'
+
+  get 'sign_in', :to => 'users/sessions#new', :as => :new_session
+
+  # authenticated :user do
+  #   root "todos#index", as: "authenticated_root"
+  # end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
