@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get 'sign_out' => 'sessions#destroy'
 
-  post 'update_todo' => 'todos#update'
+  post 'update_todo_description' => 'todos#update_description'
 
   post 'edit_todo_description' => 'todos#edit_description'
 
@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   get 'user_root' => 'todos#index'
 
   get 'sign_in', :to => 'users/sessions#new', :as => :new_session
+
+  post 'todos/update_order' => 'todos#update_order'
 
   # authenticated :user do
   #   root "todos#index", as: "authenticated_root"
