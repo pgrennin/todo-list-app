@@ -1,6 +1,6 @@
 
 <table class="table table-hover">
-  <tbody>
+  <tbody id="todos">
   <tr>
     <!-- <th>ID</th> -->
     <th><span class="table-header">Description</span></th>
@@ -11,7 +11,7 @@
 
   </tr>
 
-  <% current_user.todos.each do |todo| %>
+  <% @todos.each do |todo| %>
     <!-- button_status is complete if todo[is_complete] is true
     else, it is incomplete -->
     <% if todo["is_complete"] %>
@@ -22,7 +22,7 @@
       <% button_class = "btn btn-default" %>
     <% end %>
     <!-- Displays table of tasks -->
-    <tr class="todo-row" id="todo-row-<%=todo["id"]%>">
+    <tr class="todo-row handle" id="todo-row-<%=todo["id"]%>">
       <!-- <td><%=todo["id"]%></td> -->
       <td><span id="todo-description-field-<%=todo["id"]%>"><%=todo["description"]%></span></td>
       <!-- <td>todo["is_complete"]</td> -->
@@ -69,8 +69,22 @@
 </table>
 
 <%= javascript_tag do %>
+  // Drag and drop reordering.  Sends Ajax request to database and updates todo position 
   // Allows drag and drop reordering
-  $('tbody').sortable();
+  $('#todos').sortable({
+    update: function(){
+      $.ajax({
+        url: '/todos/update_order',
+        type: 'post',
+        data: $('#todos').sortable('serialize'),
+        dataType: 'script',
+        complete: function(request){
+          $('#todos').effect('highlight');
+        }
+      });
+    }
+
+});
 
   // changes styling of complete/incomplete button
   $('.todo-button').click(function(){
@@ -85,3 +99,5 @@
           }
       });
 <% end %>
+
+

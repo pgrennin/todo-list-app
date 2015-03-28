@@ -1,4 +1,4 @@
-<%= form_tag('/update_todo', method: "post", remote: true) do %>
+<%= form_tag('/update_todo_description', method: "post", remote: true) do %>
   <%= text_field_tag :description, @description %>
   <%= hidden_field_tag :todo_id , @todo_id %>
   <%= hidden_field_tag :is_complete , @is_complete %>

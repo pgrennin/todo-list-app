@@ -56,4 +56,6 @@ end
 
 gem 'devise', '~> 3.4.1'
 
+gem 'acts_as_list'
+
 ruby "2.0.0"
