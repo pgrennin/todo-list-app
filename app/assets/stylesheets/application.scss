@@ -81,6 +81,8 @@ font-weight: bold;
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  /*background: gray;*/
+  background-image: url(/assets/background-1.jpg);
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -158,4 +160,23 @@ body {
 }
 
 .handle:hover{cursor: move;}
+
+#todos{
+  background-color: #eee;
+}
+
+.todo-row{
+  background-color: white
+}
+
+.container{
+  background: white;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+}
+
+#todos-table{
+}
+
 

@@ -1,6 +1,5 @@
 
-<table class="table table-hover">
-  <tbody id="todos">
+<table class="table table-hover table-bordered" id="todos-table">
   <tr>
     <!-- <th>ID</th> -->
     <th><span class="table-header">Description</span></th>
@@ -11,6 +10,7 @@
 
   </tr>
 
+  <tbody id="todos">
   <% @todos.each do |todo| %>
     <!-- button_status is complete if todo[is_complete] is true
     else, it is incomplete -->

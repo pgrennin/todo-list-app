@@ -1,7 +1,7 @@
 <%= form_tag('/todos', method: "post", remote: true, id: "create-todo-form") do %>
   <%= label_tag :description %>
   <%= text_field_tag :description%>
-<%= submit_tag "Create"%>
+<%= submit_tag "Create", class: "btn btn-primary"%>
 <% end %>
 <br>
 <br>
