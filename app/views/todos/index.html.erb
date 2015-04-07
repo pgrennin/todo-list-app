@@ -1,16 +1,21 @@
 
   <!-- Create Todo Form -->
+  <%if false %>
   <p>
     <%=link_to 'Create a Todo Item', new_todo_path, remote: true, class: "btn btn-success"%>
   </p>
+  <% end %>
+
+  <p>
+    <%= render 'form' %>
+  </p>
   
-  <br>
   <div id="todo-form"></div>
 
   <!-- Todo Index -->
-  <div id="todo-index">
-    <%= render 'index' %>
-  </div>
+    <div id="todo-index" id="table-container">
+      <%= render 'index' %>
+    </div>
   <hr>
 </div>
 

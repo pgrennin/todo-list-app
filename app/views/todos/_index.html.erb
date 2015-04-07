@@ -1,10 +1,10 @@
 
-<table class="table table-hover table-bordered" id="todos-table">
+<table class="table table-hover" id="todos-table">
   <tr>
     <!-- <th>ID</th> -->
+    <th><span class="table-header">Mark complete</span></th>
     <th><span class="table-header">Description</span></th>
     <!-- <th>Completed?</th> -->
-    <th><span class="table-header">Mark complete</span></th>
     <th><span class="table-header">Edit</span></th>
     <th><span class="table-header">Delete</span></th>
 
@@ -14,7 +14,7 @@
   <% @todos.each do |todo| %>
     <!-- button_status is complete if todo[is_complete] is true
     else, it is incomplete -->
-    <% if todo["is_complete"] %>
+    <% if todo.is_complete %>
       <% button_status = "Complete" %>
       <% button_class = "btn btn-primary" %>
     <% else %>
@@ -24,16 +24,14 @@
     <!-- Displays table of tasks -->
     <tr class="todo-row handle" id="todo-row-<%=todo["id"]%>">
       <!-- <td><%=todo["id"]%></td> -->
-      <td><span id="todo-description-field-<%=todo["id"]%>"><%=todo["description"]%></span></td>
-      <!-- <td>todo["is_complete"]</td> -->
       <td><span id="todo-status-field-<%=todo["id"]%>">
         <!-- When the complete/incomplete button is clicked send the updated status as a parameter -->
-        <% if todo["is_complete"].to_s == "true" %>
+        <% if todo.is_complete %>
           <% @updated_status = "false" %>
         <%else%>
           <% @updated_status = "true" %>
         <% end %>
-
+        <!-- < check_box_tag 'is_complete', 'yes', false > -->
         <%= button_to button_status,
         update_todo_status_path( todo_id: todo["id"],
                           # description: todo["description"],
@@ -43,6 +41,15 @@
         class: "#{button_class} todo-button",
         id: "todo-button-#{todo["id"]}"%>
       </td>
+      <td>
+        <!-- add strikethrough style if status is complete -->
+        <% if todo.is_complete %>
+        <span id="todo-description-field-<%=todo["id"]%>" style="text-decoration:line-through;"><%=todo["description"]%></span>
+        <% else %>
+          <span id="todo-description-field-<%=todo["id"]%>"><%=todo["description"]%></span>        
+        <% end %>
+      </td>
+      <!-- <td>todo["is_complete"]</td> -->
       <td>
         <!-- edit todo description -->
         <%= button_to "Edit",

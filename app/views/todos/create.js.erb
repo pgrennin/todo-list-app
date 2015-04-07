@@ -1,4 +1,7 @@
 $('#todo-index').html("<%= escape_javascript(render 'index') %>");
-$('#create-todo-form').slideUp(350);
+
+$('#create-todo-form').each(function(){
+    this.reset();
+});
 
 
