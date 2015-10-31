@@ -64,7 +64,7 @@
       <td>
         <!-- Delete todo -->
         <%= button_to "Delete", { action: "destroy", id: todo["id"] },
-                                method: :delete, data: { confirm: "Are you sure?" },
+                                method: :delete, 
                                 remote: true,
                                 class: "btn btn-link todo-description-button",
                                 id: "todo-delete-button-#{todo["id"]}"%>

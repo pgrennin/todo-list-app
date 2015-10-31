@@ -2416,3 +2416,91 @@ Processing by TodosController#create as HTML
   Parameters: {"todo_id"=>"2008", "description"=>"updated todo", "is_complete"=>"true"}
 Completed 200 OK in 405ms (Views: 0.4ms | ActiveRecord: 0.0ms)
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (142.0ms)[0m  [1mDROP DATABASE IF EXISTS "my_database_test"[0m
+  [1m[35m (447.2ms)[0m  CREATE DATABASE "my_database_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.3ms)[0m  CREATE TABLE "todos" ("id" serial primary key, "user_id" integer, "description" character varying(255), "is_complete" boolean, "created_at" timestamp, "updated_at" timestamp, "position" integer) 
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX  "index_todos_on_user_id" ON "todos" USING btree ("user_id")[0m
+  [1m[35m (4.5ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150328204600')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150317142701')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150327195924')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (11.5ms)[0m  ALTER TABLE "todos" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (17.7ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 980190962)[0m
+  [1m[35mFixture Insert (1.9ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "todos" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "todos" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)[0m
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "todos" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "todos" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "todos" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "todos" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)[0m
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "todos" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "todos" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "todos" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "todos" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)[0m
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "todos" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "todos" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-04-08 17:38:54', '2015-04-08 17:38:54', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "todos" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
